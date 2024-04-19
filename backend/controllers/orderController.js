@@ -35,7 +35,7 @@ const placeOrder = async(req,res)=>{
 
         line_items.push({
             price_data:{
-                currency:"inr",
+            currency:"inr",
                 product_data:{
                     name:"Delivery Charges"
                 },
@@ -62,6 +62,7 @@ const placeOrder = async(req,res)=>{
 
 }
 
+
 const verifyOrder = async(req,res)=>{
     const {orderId,success} = req.body;
     try {
@@ -73,7 +74,9 @@ const verifyOrder = async(req,res)=>{
             res.json({success:false,message:"Not Paid"})
         }
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.json({success:false,message:"Error"})
+
         
     }
 
