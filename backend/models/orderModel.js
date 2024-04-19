@@ -1,5 +1,4 @@
 import mongoose from "mongoose"
-import moongoose from "mongoose"
 
 const orderSchema = new mongoose.Schema({
     userId:{type:String,required:true},

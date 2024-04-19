@@ -12,7 +12,7 @@ const placeOrder = async(req,res)=>{
     try {
         const newOrder = new orderModel({
             userId:req.body.userId,
-            items:req.body.amount,
+            items:req.body.items,
             amount:req.body.amount,
             address:req.body.address
         })
@@ -86,7 +86,7 @@ const verifyOrder = async(req,res)=>{
 //user order for frontend
  const userOrders = async (req,res)=>{
     try {
-        const orders = await orderModel.find({userId:req.body})
+        const orders = await orderModel.find({userId:req.body.userId})
         res.json({success:true,data:orders})
         
     } catch (error) {
