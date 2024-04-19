@@ -17,13 +17,13 @@ const placeOrder = async(req,res)=>{
             address:req.body.address
         })
         await newOrder.save();
-        await userModel.findByIdAndUpdate(req.body.userId,{cartData:{}})
+        await userModel.findByIdAndUpdate(req.body.userId,{cartData:{}});
 
 
         const line_items = req.body.items.map((item)=>({
              
                   price_data:{
-                    currency:"pkr",
+                    currency:"inr",
                     product_data:{
                         name:item.name
                     },
@@ -35,7 +35,7 @@ const placeOrder = async(req,res)=>{
 
         line_items.push({
             price_data:{
-                currency:"pkr",
+                currency:"inr",
                 product_data:{
                     name:"Delivery Charges"
                 },
@@ -51,7 +51,7 @@ const placeOrder = async(req,res)=>{
             cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}`
         })
 
-        res.json({success:true,success_url:session.url})
+        res.json({success:true,session_url:session.url})
 
     } catch (error) {
         console.log(error);
