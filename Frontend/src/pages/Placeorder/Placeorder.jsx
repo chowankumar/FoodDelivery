@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+
 import './Placeorder.css'
 import { StoreContext } from '../../context/StoreContext'
 import axios from 'axios'
@@ -54,6 +55,17 @@ const Placeorder = () => {
     
 
   }
+
+
+
+  const navigate = useNaviagte();
+  useEffect(()=>{
+    if(!token){
+      navigate('/cart')
+    }else if(getTotalCartAmount() === 0){
+      navigate('/cart')
+    }
+  },[token])
 
 
   return (
