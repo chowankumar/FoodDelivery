@@ -41,7 +41,7 @@ export const MyOders = () => {
                                 <p>${order.amount}.00</p>
                                 <p>Itmes : {order.items.length}</p>
                                 <p><span>&#x25cf;<b>{order.status}</b></span></p>
-                                <button>Track Order</button>
+                                <button onClick={fetchOrders}>Track Order</button>
                                 
                             </div>
                         )
