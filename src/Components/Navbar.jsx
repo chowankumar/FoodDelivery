@@ -6,7 +6,7 @@ const Navbar = () => {
     const [menu, setMenu] = useState("")
     return (
 
-        <div className='p-8 flex flex-col gap-2 lg:flex-row  justify-between items-center w-[80%] m-auto '>
+        <div className='p-8 flex flex-col gap-2 lg:flex-row  justify-between items-center   m-auto '>
 
             <div className="left-nav">
                 <img src={assets.logo} alt="" />

@@ -4,7 +4,7 @@ import './../GerenalCss.css'
 
 const ExploreMenu = ({category,setCategory}) => {
   return (
-    <div className='w-[80%] m-auto mt-8 mb-8'>
+    <div className='m-auto mt-8 mb-8'>
         <h1 className='text-[#262626] text-[45px] font-[500]'>Explore our menu</h1>
         <div className="menu-text w-[60%] font-[500]">
         Choose from a diverse menu featuring a delectable array of dishes. Our mission is to Choose from a diverse menu featuring a delectable array of dishes. Our mission is to
