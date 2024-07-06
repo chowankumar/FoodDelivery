@@ -7,6 +7,7 @@ import Cart from './Pages/Cart'
 function App() {
   
   return (
+    <>
     <div className='w-80% m-auto'>
     <Navbar/>
     <Routes>
@@ -15,6 +16,8 @@ function App() {
       <Route path='/order' element={<PlaceOrder/>}/>
     </Routes>
     </div>
+    <Footer/>
+    </>
   
     
   )
