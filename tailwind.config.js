@@ -8,7 +8,10 @@ export default {
     extend: {
       backgroundImage: {
         'custom-header': "url('./assets/header_img.png')",
+        
       },
+       
+
     },
   },
   plugins: [],
