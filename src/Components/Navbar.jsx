@@ -6,12 +6,12 @@ const Navbar = () => {
     const [menu, setMenu] = useState("")
     return (
 
-        <div className='p-8 flex justify-between items-center w-[80%] m-auto'>
+        <div className='p-8 flex flex-col gap-2 lg:flex-row  justify-between items-center w-[80%] m-auto '>
 
             <div className="left-nav">
                 <img src={assets.logo} alt="" />
             </div>
-            <div className="middle-nav flex list-none gap-6 font-semibold text-[19px]">
+            <div className="middle-nav flex  list-none gap-6 font-semibold text-[19px]">
 
                 <li onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""} cursor-pointer`}>home</li>
                 <li onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""} cursor-pointer`}>menu</li>
@@ -21,7 +21,7 @@ const Navbar = () => {
 
 
             </div>
-            <div className="right-nav flex items-center justify-between gap-16">
+            <div className="right-nav flex items-center justify-between gap-16 lg:gap-8">
                 <div className="search">
                     <img src={assets.search_icon} alt="" />
                 </div>
