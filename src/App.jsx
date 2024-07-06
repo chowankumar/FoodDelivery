@@ -3,12 +3,13 @@ import { Route,Routes } from 'react-router-dom'
 import Home from "./Pages/Home"
 import PlaceOrder from './Pages/PlaceOrder'
 import Cart from './Pages/Cart'
+import Footer from './Components/Footer'
 
 function App() {
   
   return (
     <>
-    <div className='w-80% m-auto'>
+    <div className='w-[80%] m-auto'>
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>}/>
@@ -16,7 +17,8 @@ function App() {
       <Route path='/order' element={<PlaceOrder/>}/>
     </Routes>
     </div>
-    <Footer/>
+      <Footer/>
+  
     </>
   
     
