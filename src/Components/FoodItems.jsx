@@ -9,7 +9,7 @@ const FoodItems = ({ id, name, price, image, desc,}) => {
 
     <div className='rounded-[10px] bg-white shadow-md relative'>
 
-      <img src={image} alt="" className='rounded-tl-[15px] rounded-tr-[15px] max-h-[300px]' />
+      <img src={image} alt="" className='rounded-tl-[15px] rounded-tr-[15px] w-[100%]' />
       {
        !cartItems[id]? <img src={assets.add_icon_white} alt=""  onClick={()=>addToCart(id)} className='absolute bg-white top-[198px] 
        right-[20px] rounded-full h-10'/>
