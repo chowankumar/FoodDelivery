@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import "../GerenalCss.css"
 
@@ -14,10 +15,10 @@ const Navbar = () => {
 
             <div className="middle-nav hidden xl:flex list-none lg:gap-4 gap-6 font-semibold text-[19px]">
 
-                <li onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""} cursor-pointer`}>home</li>
-                <li onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""} cursor-pointer`}>menu</li>
-                <li onClick={() => setMenu("mobile-app")} className={`${menu === "mobile-app" ? "active" : ""} cursor-pointer`}>mobile-app</li>
-                <li onClick={() => setMenu("contact-us")} className={`${menu === "contact-us" ? "active" : ""} cursor-pointer`}>contact us</li>
+                <Link href="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""} cursor-pointer`}>home</Link>
+                <a href='#menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""} cursor-pointer`}>menu</a>
+                <a href='#mobile' onClick={() => setMenu("mobile-app")} className={`${menu === "mobile-app" ? "active" : ""} cursor-pointer`}>mobile-app</a>
+                <a href='#footer' onClick={() => setMenu("contact-us")} className={`${menu === "contact-us" ? "active" : ""} cursor-pointer`}>contact us</a>
 
 
 

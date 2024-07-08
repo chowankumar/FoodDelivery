@@ -3,9 +3,9 @@ import { assets } from '../assets/assets'
 
 const Footer = () => {
     return (
-        <div className='bg-gray-800 text-white '>
+        <div className='bg-gray-800 text-white ' id='footer'>
 
-            <div className='flex-row p-10 md:flex md:gap-8'>
+            <div className='flex-row p-10 md:flex md:p-20 md:gap-8'>
 
                 <div className="footer-left w-[100%] flex flex-col items-start gap-2 md:w-[40%]">
                     <img src={assets.logo} alt="" />
