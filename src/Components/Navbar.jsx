@@ -10,7 +10,7 @@ const Navbar = ({setShowLogin}) => {
         <div className='p-3 lg:p-8 flex gap-2  justify-between items-center m-auto'>
 
             <div className="left-nav">
-                <img src={assets.logo} alt="" />
+                <Link to="/"><img src={assets.logo} alt="" /></Link>
             </div>
 
             <div className="middle-nav hidden xl:flex list-none lg:gap-4 gap-6 font-semibold text-[19px]">
@@ -30,11 +30,11 @@ const Navbar = ({setShowLogin}) => {
                 <div className="search">
                     <img src={assets.search_icon} alt="" />
                 </div>
-                <div className="basket relative">
+                <Link to="/cart"><div className="basket relative">
                     <img src={assets.basket_icon} alt="" />
                     <div className="dot absolute min-w-[10px] min-h-[10px] bg-red-500 rounded-[5px]
                      top-[-8px] right-[-8px]"></div>
-                </div>
+                </div></Link>
                 <div className="signin-button">
                     <button className=' border border-gray-400 px-4 py-2 xl:px-6 xl:py-2 rounded-full hover:bg-[#fff4f2]' onClick={()=>setShowLogin(true)}>sign in</button>
                 </div>

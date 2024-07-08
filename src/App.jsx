@@ -15,6 +15,7 @@ function App() {
     {
       showLogin?<SignnPopup setShowLogin={setShowLogin}/>:<></>
     }
+
     <div className='w-[80%] m-auto'>
     <Navbar setShowLogin={setShowLogin}/>
     <Routes>
@@ -23,7 +24,8 @@ function App() {
       <Route path='/order' element={<PlaceOrder/>}/>
     </Routes>
     </div>
-      <Footer/>
+
+    <Footer/>
   
     </>
   

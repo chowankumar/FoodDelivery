@@ -10,6 +10,9 @@ export default {
         'custom-header': "url('./assets/header_img.png')",
         
       },
+      gridTemplateColumns: {
+        'custom-grid': '1fr 1.5fr 1fr 1fr 1fr 0.5fr',
+      }
        
 
     },
