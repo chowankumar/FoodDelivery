@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import "../GerenalCss.css"
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
     const [menu, setMenu] = useState("")
     return (
 
@@ -36,7 +36,7 @@ const Navbar = () => {
                      top-[-8px] right-[-8px]"></div>
                 </div>
                 <div className="signin-button">
-                    <button className=' border border-gray-400 px-4 py-2 xl:px-6 xl:py-2 rounded-full hover:bg-[#fff4f2]'>sign in</button>
+                    <button className=' border border-gray-400 px-4 py-2 xl:px-6 xl:py-2 rounded-full hover:bg-[#fff4f2]' onClick={()=>setShowLogin(true)}>sign in</button>
                 </div>
             </div>
 

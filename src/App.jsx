@@ -4,13 +4,19 @@ import Home from "./Pages/Home"
 import PlaceOrder from './Pages/PlaceOrder'
 import Cart from './Pages/Cart'
 import Footer from './Components/Footer'
+import { useState } from 'react'
+import SignnPopup from './Components/SignnPopup'
 
 function App() {
+  const [showLogin,setShowLogin] = useState(false);
   
   return (
     <>
+    {
+      showLogin?<SignnPopup setShowLogin={setShowLogin}/>:<></>
+    }
     <div className='w-[80%] m-auto'>
-    <Navbar/>
+    <Navbar setShowLogin={setShowLogin}/>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/cart' element={<Cart/>}/>
