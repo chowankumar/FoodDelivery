@@ -28,11 +28,11 @@ const Cart = () => {
                   <p>{cartItems[item._id]}</p>
                   <p>{cartItems[item._id] * item.price}</p>
 
-                  <p className='cursor-pointer' onClick={()=>removeFromCart(item._id) }>x</p>
+                  <p className='cursor-pointer' onClick={() => removeFromCart(item._id)}>x</p>
 
 
                 </div>
-                <hr className='mb-2 mt-2'/>
+                <hr className='mb-2 mt-2' />
               </div>
 
             )
@@ -42,46 +42,54 @@ const Cart = () => {
 
 
 
-       <div className='mt-24 flex flex-col lg:flex-row gap-4'>
+      <div className='mt-[100px] flex flex-col justify-between  lg:flex-row lg:'>
 
-        <div className='w-[40%]'>
-          <h1 className='font-[700] text-[25px] mb-4'>Cart Totals</h1>
+        <div className='flex-1 flex flex-col gap-[20px]'>
+          <h1 className='font-[700] text-[25px]'>Cart Totals</h1>
 
-          <div className='flex justify-between font-[400] text-[18px] text-gray-500'>
+          <div className='flex justify-between text-[#555]'>
             <p>Subtotal</p>
             <p>{0}</p>
           </div>
-          <hr className='h-2 bg-gray mt-2 mb-2'/>
+          <hr className='bg-gray mt-2' />
 
-          <div className='flex justify-between font-[400] text-[18px] text-gray-500'>
+          <div className='flex justify-between'>
             <p>Subtotal</p>
             <p>{2}</p>
           </div>
-          <hr className='h-2 bg-gray mt-2 mb-2'/>
+          <hr className='mt-2' />
 
-          <div className='flex justify-between font-[700] text-[18px] text-gray-800'>
+          <div className='flex justify-between'>
             <p>Total</p>
             <p>{0}</p>
           </div>
-           
 
-          <button className='bg-orange-600 py-3 px-10 mt-4 text-white text-[15px] font-[500] rounded-[5px]'>PROCEED TO CHECKPUT</button>
+
+          <button className='bg-orange-600 py-3 px-10 mt-4 text-white text-[15px] font-[500] rounded-[5px] w-fit'>PROCEED TO CHECKPUT</button>
 
         </div>
-        
 
-        <div className='w-[40%] flex flex-col items-center justify-between  mt-4  gap-2 '>
 
-          <div>
+        <div className=' flex-1 flex flex-col items-center justify-between  mt-4  gap-2 '>
 
-          <p className='text-[16px] font-[500] text-gray-600'>If you have a promo code. Enter it here</p> 
-          <input type="text"  placeholder="promocode" className='border bg-gray-200 text-black w-[60%] py-[11px] p-4'/>
-          <button className='bg-black text-white py-[11px] w-[150px] '>Submit</button>
+          <div className='flex-1'>
+            <div>
+              <p className='text-[16px] font-[500] text-gray-600'>If you have a promo code. Enter it here</p>
+              <div className='mt-[10px] flex justify-between items-center bg-[#eaeaea] rounded-[4px]'>
+              <input type="text" placeholder="promocode" className='border-none outline-none bg-transparent pl-[15px]' />
+              <button className='bg-black text-white py-[11px] w-[150px] rounded-[4px] '>Submit</button>
+
+                
+              </div>
+
+            </div>
+
+
 
 
           </div>
         </div>
-       </div>
+      </div>
     </div>
   )
 }
