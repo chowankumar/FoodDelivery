@@ -12,7 +12,11 @@ export default {
       },
       gridTemplateColumns: {
         'custom-grid': '1fr 1.5fr 1fr 1fr 1fr 0.5fr',
-      }
+        'custom-grid2': '2fr 1fr 1fr',
+      },
+      
+        
+    
        
 
     },

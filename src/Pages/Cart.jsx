@@ -4,7 +4,7 @@ import { StoreContext } from '../context/StoreContext'
 const Cart = () => {
   const { cartItems, food_list, removeFromCart } = useContext(StoreContext)
   return (
-    <div className='h-96 mt-[100px] mb-[100px]'>
+    <div className='mt-[100px]'>
       <div className='grid grid-cols-custom-grid text-gray-500 font-[500]'>
         <p>Items</p>
         <p>Title</p>
@@ -21,8 +21,9 @@ const Cart = () => {
               <div>
                 <div className='grid grid-cols-custom-grid items-center text-black text-[17px] font-[500]'>
 
-                  <img src={item.image} alt="" className='w-20' />
-                  <p>{item.name}</p>
+                  <img src={item.image} alt="" className='w-15 
+                  md:w-20' />
+                  <p className='ml-2'>{item.name}</p>
                   <p>${item.price}</p>
                   <p>{cartItems[item._id]}</p>
                   <p>{cartItems[item._id] * item.price}</p>
@@ -41,7 +42,7 @@ const Cart = () => {
 
 
 
-       <div className='mt-24 flex gap-40'>
+       <div className='mt-24 grid grid-rows-2 gap-40'>
         <div className='w-[40%]'>
           <h1 className='font-[700] text-[25px] mb-4'>Cart Totals</h1>
 

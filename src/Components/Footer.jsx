@@ -3,39 +3,43 @@ import { assets } from '../assets/assets'
 
 const Footer = () => {
     return (
-        <div className='bg-gray-800 text-white ' id='footer'>
-
-            <div className='flex-row p-10 md:flex md:p-20 md:gap-8'>
-
-                <div className="footer-left w-[100%] flex flex-col items-start gap-2 md:w-[40%]">
-                    <img src={assets.logo} alt="" />
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, nulla provident dolorum minus excepturi, debitis cum odit veniam dolor accusantium quo laboriosam, eos perferendis. Cumque dolor magni nisi ad laudantium minus nemo praesentium temporibus debitis natus voluptates quos asperiores aperiam soluta distinctio id dolorum, voluptatem officiis numquam blanditiis! Quaerat, quae.</p>
-                </div>
-
-                <div className="footer-middle w-[100%] flex flex-col items-start text-center mt-4 md:w-[30%]">
-                    <h1 className='font-[500] text-[30px]'>Company</h1>
-                    <div className='flex flex-col items-start'>
-                        <p>Home</p>
-                        <p>About Us</p>
-                        <p>Delivery</p>
-                        <p>Privacy Policy</p>
-                    </div>
-
-                </div>
-
-                <div className="footer-right w-[100%] flex flex-col items-start mt-4 md:w-[30%]">
-                    <h1 className='font-[500] text-[30px]'>GET IN TOUCH</h1>
-                    <div>
-                        <p>03499435773</p>
-                        <p>chowanmalhani5@gmail.com</p>
-                    </div>
+        <div className='text-[#d9d9d9] bg-[#323232] flex flex-col items-center gap-[20px] pt-[80px] mt-[100px] p-20' id='footer'>
+        <div className="w-[100%] grid grid-cols-custom-grid2 gap-[80px]">
+            <div className="flex flex-col items-start gap-[20px]">
+                <img src={assets.logo} alt="" />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, maxime suscipit! Sit, soluta. Inventore ab officiis doloremque harum suscipit quibusdam.</p>
+                <div className="footer-social-icons">
+                    <img src={assets.facebook_icon} alt=""  className='w-[40px] mr-[15px]'/>
+                    <img src={assets.twitter_icon} alt=""  className='w-[40px] mr-[15px]'/>
+                    <img src={assets.linkedin_icon} alt="" className='w-[40px] mr-[15px]' />
                 </div>
 
             </div>
+            
+     <div className="flex flex-col items-start gap-[20px]">
+        <h2  className='text-white'>COMPANY</h2>
+        <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Delivery</li>
+            <li>Privacy Policy</li>
+        </ul>
 
-
-
+      </div>
+    <div className="flex flex-col items-start gap-[20px]">
+        <h2 className='text-white'>GET IN TOUCH</h2>
+        <ul>
+            <li>03499435773</li>
+            <li>chowanmalhani5@gmail.com</li>
+        </ul>
+    </div>
         </div>
+        <hr className='w-[100%] h-[2px] m-[20px_0] bg-gray-500 border-none' />
+        <p className="footer-copyright">
+            Copyright 2024 Tomatato.com - All Right Reserved
+        </p>
+
+    </div>
     )
 }
 
