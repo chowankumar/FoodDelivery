@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { StoreContext } from '../context/StoreContext'
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart } = useContext(StoreContext)
+  const { cartItems, food_list, removeFromCart,getTotalCartAmount } = useContext(StoreContext)
   return (
     <div className='mt-[100px] w-[100%]'>
       <div className='grid grid-cols-custom-grid text-gray-500 font-[500]'>
@@ -42,26 +42,26 @@ const Cart = () => {
 
 
 
-      <div className='mt-[100px] flex flex-col justify-between  lg:flex-row lg:'>
+      <div className='mt-[100px] flex flex-col justify-between  md:flex-row gap-8'>
 
         <div className='flex-1 flex flex-col gap-[20px]'>
           <h1 className='font-[700] text-[25px]'>Cart Totals</h1>
 
           <div className='flex justify-between text-[#555]'>
             <p>Subtotal</p>
-            <p>{0}</p>
+            <p>${getTotalCartAmount()}</p>
           </div>
           <hr className='bg-gray mt-2' />
 
           <div className='flex justify-between'>
-            <p>Subtotal</p>
-            <p>{2}</p>
+            <p>Fees</p>
+            <p>${2}</p>
           </div>
           <hr className='mt-2' />
 
           <div className='flex justify-between'>
             <p>Total</p>
-            <p>{0}</p>
+            <p>${getTotalCartAmount() + 2}</p>
           </div>
 
 
@@ -70,7 +70,7 @@ const Cart = () => {
         </div>
 
 
-        <div className=' flex-1 flex flex-col items-center justify-between  mt-4  gap-2 '>
+        
 
           <div className='flex-1'>
             <div>
@@ -82,7 +82,7 @@ const Cart = () => {
                 
               </div>
 
-            </div>
+            
 
 
 
