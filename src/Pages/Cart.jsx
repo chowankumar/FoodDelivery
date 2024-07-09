@@ -4,7 +4,7 @@ import { StoreContext } from '../context/StoreContext'
 const Cart = () => {
   const { cartItems, food_list, removeFromCart } = useContext(StoreContext)
   return (
-    <div className='mt-[100px]'>
+    <div className='mt-[100px] w-[100%]'>
       <div className='grid grid-cols-custom-grid text-gray-500 font-[500]'>
         <p>Items</p>
         <p>Title</p>
@@ -42,7 +42,8 @@ const Cart = () => {
 
 
 
-       <div className='mt-24 grid grid-rows-2 gap-40'>
+       <div className='mt-24 flex flex-col lg:flex-row gap-4'>
+
         <div className='w-[40%]'>
           <h1 className='font-[700] text-[25px] mb-4'>Cart Totals</h1>
 
@@ -67,12 +68,15 @@ const Cart = () => {
           <button className='bg-orange-600 py-3 px-10 mt-4 text-white text-[15px] font-[500] rounded-[5px]'>PROCEED TO CHECKPUT</button>
 
         </div>
-        <div className='w-[50%] flex flex-col items-start justify-center gap-2 '>
-          <p className='text-[16px] font-[500] text-gray-600'>If you have a promo code. Enter it here</p>
+        
+
+        <div className='w-[40%] flex flex-col items-center justify-between  mt-4  gap-2 '>
+
           <div>
-            
-          <input type="text"  placeholder="promocode" className='border bg-gray-300 w-[400px] py-[7px] p-4'/>
-          <button className='bg-black text-white p-[7px] w-[150px] '>Submit</button>
+
+          <p className='text-[16px] font-[500] text-gray-600'>If you have a promo code. Enter it here</p> 
+          <input type="text"  placeholder="promocode" className='border bg-gray-200 text-black w-[60%] py-[11px] p-4'/>
+          <button className='bg-black text-white py-[11px] w-[150px] '>Submit</button>
 
 
           </div>
