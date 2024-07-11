@@ -1,7 +1,9 @@
 import React, { useContext } from 'react'
 import { StoreContext } from '../context/StoreContext'
 
+
 const Cart = () => {
+  
   const { cartItems, food_list, removeFromCart,getTotalCartAmount } = useContext(StoreContext)
   return (
     <div className='mt-[100px] w-[100%]'>
@@ -61,11 +63,14 @@ const Cart = () => {
 
           <div className='flex justify-between'>
             <p>Total</p>
-            <p>${getTotalCartAmount() + 2}</p>
+            {
+              getTotalCartAmount()>0?<p>${getTotalCartAmount() + 2}</p>:<p>${getTotalCartAmount()}</p>
+            }
+           
           </div>
 
 
-          <button className='bg-orange-600 py-3 px-10 mt-4 text-white text-[15px] font-[500] rounded-[5px] w-fit'>PROCEED TO CHECKPUT</button>
+          <button  className=' bg-orange-600 py-3 px-10 mt-4 text-white text-[15px] font-[500] rounded-[5px] w-fit'>PROCEED TO CHECKPUT</button>
 
         </div>
 

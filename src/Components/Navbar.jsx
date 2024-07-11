@@ -1,10 +1,12 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import "../GerenalCss.css"
+import { StoreContext } from '../context/StoreContext'
 
 const Navbar = ({setShowLogin}) => {
     const [menu, setMenu] = useState("")
+    const {getTotalCartAmount} = useContext(StoreContext)
     return (
 
         <div className='p-3 lg:p-8 flex gap-2  justify-between items-center m-auto'>
@@ -32,8 +34,9 @@ const Navbar = ({setShowLogin}) => {
                 </div>
                 <Link to="/cart"><div className="basket relative">
                     <img src={assets.basket_icon} alt="" />
-                    <div className="dot absolute min-w-[10px] min-h-[10px] bg-red-500 rounded-[5px]
-                     top-[-8px] right-[-8px]"></div>
+                    {getTotalCartAmount()? <div className="dot absolute min-w-[10px] min-h-[10px] bg-red-500 rounded-[5px]
+                     top-[-8px] right-[-8px]"></div>:<></>}
+                   
                 </div></Link>
                 <div className="signin-button">
                     <button className=' border border-gray-400 px-4 py-2 xl:px-6 xl:py-2 rounded-full hover:bg-[#fff4f2]' onClick={()=>setShowLogin(true)}>sign in</button>
