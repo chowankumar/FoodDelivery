@@ -41,7 +41,7 @@ const PlaceOrder = () => {
             </div>
 
 
-            <button onClick={()=>navigate('/order')} className='bg-orange-600 py-3 px-10 mt-4 text-white text-[15px] font-[500] rounded-[5px] w-fit'>PROCEED TO PAYMENT</button>
+            <button className='bg-orange-600 py-3 px-10 mt-4 text-white text-[15px] font-[500] rounded-[5px] w-fit'>PROCEED TO PAYMENT</button>
 
           </div>
 

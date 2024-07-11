@@ -1,8 +1,10 @@
 import React, { useContext } from 'react'
 import { StoreContext } from '../context/StoreContext'
+import { useNavigate } from 'react-router-dom'
 
 
 const Cart = () => {
+  const navigate = useNavigate()
   
   const { cartItems, food_list, removeFromCart,getTotalCartAmount } = useContext(StoreContext)
   return (
@@ -70,7 +72,7 @@ const Cart = () => {
           </div>
 
 
-          <button  className=' bg-orange-600 py-3 px-10 mt-4 text-white text-[15px] font-[500] rounded-[5px] w-fit'>PROCEED TO CHECKPUT</button>
+          <button onClick={()=>navigate('/order')}  className=' bg-orange-600 py-3 px-10 mt-4 text-white text-[15px] font-[500] rounded-[5px] w-fit'>PROCEED TO CHECKPUT</button>
 
         </div>
 
