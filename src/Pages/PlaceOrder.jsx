@@ -3,18 +3,35 @@ import { StoreContext } from '../context/StoreContext'
 import { useNavigate } from 'react-router-dom'
 
 const PlaceOrder = () => {
-  const {getTotalCartAmount} = useContext(StoreContext)
+  const { getTotalCartAmount } = useContext(StoreContext)
   const navigate = useNavigate();
   return (
 
-    <div>
-      <div className="left">
+    <div className='flex'>
+      <div className="flex-1">
+        <h1 className='text-[30px] font-[500]'>Delivery Information</h1>
 
-        <form action="">
+        <form action="" className=''>
+          <div>
+          <input type="text" placeholder='first name' className='border  bg-white outline-none pl-3 py-1 rounded-[5px]'/>
+          <input type="text" placeholder='last name' />
+          </div>
+          <input type="text" placeholder='email address' />
+          <input type="text" placeholder='street' />
+          <div>
+          <input type="text" placeholder='city'/>
+          <input type="text" placeholder='state' />
+          </div>
+          <div>
+          <input type="text" placeholder='Zip Code'/>
+          <input type="text" placeholder='Country' />
+          </div>
+          <input type="text" placeholder='Phone' />
+
 
         </form>
       </div>
-      <div className="right">
+      <div className="flex-1">
         <div className='mt-[100px] flex flex-col justify-between  md:flex-row gap-8'>
 
           <div className='flex-1 flex flex-col gap-[20px]'>
@@ -45,26 +62,6 @@ const PlaceOrder = () => {
 
           </div>
 
-
-
-
-          <div className='flex-1'>
-            <div>
-              <p className='text-[16px] font-[500] text-gray-600'>If you have a promo code. Enter it here</p>
-              <div className='mt-[10px] flex justify-between items-center bg-[#eaeaea] rounded-[4px]'>
-                <input type="text" placeholder="promocode" className='border-none outline-none bg-transparent pl-[15px]' />
-                <button className='bg-black text-white py-[11px] w-[150px] rounded-[4px] '>Submit</button>
-
-
-              </div>
-
-
-
-
-
-
-            </div>
-          </div>
         </div>
       </div>
     </div>
