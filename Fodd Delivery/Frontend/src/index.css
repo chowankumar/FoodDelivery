@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *{
   padding: 0;
   margin: 0;
@@ -11,4 +15,10 @@ body{
 a{
   text-decoration: none;
   color: inherit;
+  
+}
+
+.active{
+  padding-bottom:  2px;
+  border-bottom: 2px solid #49557e;
 }
